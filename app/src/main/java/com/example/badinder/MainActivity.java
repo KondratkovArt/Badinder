@@ -59,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
         SwipeFlingAdapterView flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
+        if (cards.size() == 0) {
+
+        }
+
         flingContainer.setAdapter(arrayAdapter);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
             @Override
@@ -97,7 +101,6 @@ public class MainActivity extends AppCompatActivity {
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
             public void onItemClicked(int itemPosition, Object dataObject) {
-
                 Toast.makeText(MainActivity.this, "Ну не кликай", Toast.LENGTH_SHORT).show();
             }
         });
@@ -110,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    Toast.makeText(MainActivity.this, "Опа, и тут нраица, и там нраица", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "У вас есть совпадение!", Toast.LENGTH_LONG).show();
 
                     String key = FirebaseDatabase.getInstance().getReference().child("Chat").push().getKey();
 
@@ -136,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                 if (snapshot.exists()) {
                     if (snapshot.child("sex").getValue() != null) {
                         userSex = snapshot.child("sex").getValue().toString();
-                        notUserSex = (userSex.equals("Казак")) ? "Девка" : "Казак";
+                        notUserSex = (userSex.equals("male")) ? "female" : "male";
                     }
                     getOppositesBySex();
                 }
@@ -191,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToSettings(View view) {
-        Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
         startActivity(intent);
         return;
     }

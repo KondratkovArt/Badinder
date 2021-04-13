@@ -12,11 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.badinder.R;
 import com.example.badinder.chat.ChatActivity;
 
-import org.w3c.dom.Text;
-
 public class MatchesViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public TextView mMatchId, mMatchName;
+    public TextView mLastMessage, mMatchName;
 
     public ImageView mMatchImage;
 
@@ -24,7 +22,7 @@ public class MatchesViewHolder extends RecyclerView.ViewHolder implements View.O
         super(itemView);
         itemView.setOnClickListener(this);
 
-        mMatchId = (TextView) itemView.findViewById(R.id.matchId);
+        mLastMessage = (TextView) itemView.findViewById(R.id.lastMessage);
         mMatchName = (TextView) itemView.findViewById(R.id.matchName);
 
         mMatchImage = (ImageView) itemView.findViewById(R.id.matchImage);
@@ -35,7 +33,7 @@ public class MatchesViewHolder extends RecyclerView.ViewHolder implements View.O
     public void onClick(View v) {
         Intent intent = new Intent(v.getContext(), ChatActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("matchId", mMatchId.getText().toString());
+        bundle.putString("lastMessage", mLastMessage.getText().toString());
         intent.putExtras(bundle);
         v.getContext().startActivity(intent);
     }

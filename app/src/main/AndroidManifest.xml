@@ -11,9 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BaDinder">
-        <activity android:name=".chat.ChatActivity"></activity>
+        <activity android:name=".cards.CardActivity"></activity>
+        <activity android:name=".chat.ChatActivity" />
         <activity android:name=".matches.MatchesActivity" />
-        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegistrationActivity" />
         <activity android:name=".MainActivity" />
