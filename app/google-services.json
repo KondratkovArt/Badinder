@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "285293471116",
+    "firebase_url": "https://badinder-65e6c.firebaseio.com",
+    "project_id": "badinder-65e6c",
+    "storage_bucket": "badinder-65e6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285293471116:android:68a6958b1eaa83a539e2a9",
+        "android_client_info": {
+          "package_name": "com.example.badinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285293471116-vfvk320iv7sibllfdt2g0ucdber91icu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.badinder",
+            "certificate_hash": "c0fe0f5bad7843357114d21eff6d20a345a76f7a"
+          }
+        },
+        {
+          "client_id": "285293471116-ns6rhpfihqeele1v824vah1d4ia7fe4m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF3qoBjUuT1QErEUMnQ4hnUa38U0LZXco"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285293471116-ns6rhpfihqeele1v824vah1d4ia7fe4m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
