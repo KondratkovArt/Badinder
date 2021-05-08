@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.badinder.MainActivity;
 import com.example.badinder.R;
@@ -23,7 +25,9 @@ public class MatchesActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mMatchesAdapter;
     private RecyclerView.LayoutManager mMatchesLayoutManager;
+    private TextView haveNotMatches;
 
+    private ArrayList<MatchesObject> resultMatches = new ArrayList<MatchesObject>();
     private String currentUserID;
 
     @Override
@@ -33,6 +37,10 @@ public class MatchesActivity extends AppCompatActivity {
 
         currentUserID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+        haveNotMatches = findViewById(R.id.have_not_matches);
+        haveNotMatches.setVisibility(View.INVISIBLE);
+
+
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mRecyclerView.setNestedScrollingEnabled(false);
         mRecyclerView.setHasFixedSize(true);
@@ -40,6 +48,7 @@ public class MatchesActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mMatchesLayoutManager);
         mMatchesAdapter = new MatchesAdapter(getDataSetMatches(), MatchesActivity.this);
         mRecyclerView.setAdapter(mMatchesAdapter);
+        if (resultMatches.size() == 0) haveNotMatches.setVisibility(View.VISIBLE);
 
         getUserMatchId();
 
@@ -94,7 +103,7 @@ public class MatchesActivity extends AppCompatActivity {
 
     }
 
-    private ArrayList<MatchesObject> resultMatches = new ArrayList<MatchesObject>();
+
     private List<MatchesObject> getDataSetMatches() {
         return resultMatches;
     }
