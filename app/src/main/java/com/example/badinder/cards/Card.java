@@ -9,6 +9,7 @@ public class Card {
     private String name;
     private String profileImageUrl;
     private List<String> images;
+    private List<String> interests;
 
     public Card(String userId, String name, String profileImageUrl, List<String> images) {
         this.userId = userId;

@@ -12,6 +12,8 @@ import com.bumptech.glide.Glide;
 import com.example.badinder.R;
 import com.example.badinder.cards.Card;
 
+import org.w3c.dom.Text;
+
 import java.util.List;
 
 public class CardsArrayAdapter extends ArrayAdapter<Card> {
@@ -30,6 +32,9 @@ public class CardsArrayAdapter extends ArrayAdapter<Card> {
 
         TextView name = (TextView) convertView.findViewById(R.id.name);
         ImageView image = (ImageView) convertView.findViewById(R.id.image);
+        TextView interests = (TextView)  convertView.findViewById(R.id.card_interests);
+
+        interests.setText("Кулинария Спорт");
 
         name.setText(cardItem.getName());
         switch (cardItem.getProfileImageUrl()) {

@@ -10,9 +10,11 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -37,6 +39,8 @@ public class ProfileActivity extends AppCompatActivity {
 
     private EditText mNameField, mPhoneField;
 
+//    private Spinner mInterests;
+
     private Button mBack, mConfirm;
     private ImageView mProfileImage;
 
@@ -45,7 +49,9 @@ public class ProfileActivity extends AppCompatActivity {
 
     private String userId, name, phone, profileImageUrl, userSex;
 
+
     private Uri resultUri;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +60,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         mNameField = (EditText) findViewById(R.id.name);
         mPhoneField = (EditText) findViewById(R.id.phone);
+
 
         mProfileImage = (ImageView) findViewById(R.id.profileImage);
 
