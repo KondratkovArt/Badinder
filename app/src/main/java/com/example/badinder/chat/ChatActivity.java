@@ -6,11 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.badinder.CallActivity;
 import com.example.badinder.R;
 import com.example.badinder.matches.MatchesActivity;
 import com.example.badinder.matches.MatchesAdapter;
@@ -35,7 +37,7 @@ public class ChatActivity extends AppCompatActivity {
 
     private EditText mSendEditText;
 
-    private Button mSendButton;
+    private Button mSendButton, mCallBtn;
 
     private String currentUserID, matchId, chatId;
 
@@ -69,6 +71,14 @@ public class ChatActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sendMessage();
+            }
+        });
+
+        mCallBtn = (Button) findViewById(R.id.chat_callBtn);
+        mCallBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChatActivity.this, CallActivity.class));
             }
         });
     }

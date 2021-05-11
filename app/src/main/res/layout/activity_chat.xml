@@ -7,6 +7,9 @@
     tools:context=".chat.ChatActivity"
     android:orientation="vertical">
 
+
+
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,8 +30,14 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/chat_callBtn"
+            android:layout_width="76dp"
+            android:layout_height="wrap_content"
+            android:text="Call" />
+
         <EditText
-            android:layout_weight="0.8"
+            android:layout_weight="0.7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="message..."
