@@ -33,7 +33,7 @@ public class MatchesViewHolder extends RecyclerView.ViewHolder implements View.O
     public void onClick(View v) {
         Intent intent = new Intent(v.getContext(), ChatActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putString("lastMessage", mLastMessage.getText().toString());
+        bundle.putString("matchId", mLastMessage.getText().toString());
         intent.putExtras(bundle);
         v.getContext().startActivity(intent);
     }
