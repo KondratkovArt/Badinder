@@ -48,10 +48,10 @@ public class MatchesActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(mMatchesLayoutManager);
         mMatchesAdapter = new MatchesAdapter(getDataSetMatches(), MatchesActivity.this);
         mRecyclerView.setAdapter(mMatchesAdapter);
-        if (resultMatches.size() == 0) haveNotMatches.setVisibility(View.VISIBLE);
 
         getUserMatchId();
 
+//        if (resultMatches.size() == 0) haveNotMatches.setVisibility(View.VISIBLE);
 
     }
 

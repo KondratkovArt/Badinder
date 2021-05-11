@@ -10,7 +10,7 @@
     <EditText
         android:id="@+id/email"
         android:layout_width="289dp"
-        android:layout_height="38dp"
+        android:layout_height="50dp"
         android:layout_marginTop="212dp"
         android:hint="email"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,7 +20,7 @@
     <EditText
         android:id="@+id/password"
         android:layout_width="289dp"
-        android:layout_height="38dp"
+        android:layout_height="50dp"
         android:layout_marginTop="44dp"
         android:hint="password"
         app:layout_constraintEnd_toEndOf="parent"

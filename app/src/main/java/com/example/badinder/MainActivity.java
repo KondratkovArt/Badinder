@@ -75,17 +75,17 @@ public class MainActivity extends AppCompatActivity {
             public void onLeftCardExit(Object dataObject) {
                 Card obj = (Card) dataObject;
                 String userId = obj.getUserId();
-                usersDB.child(userId).child("connections").child("Не нравится").child(currentUserId).setValue(true);
-                Toast.makeText(MainActivity.this, "Like", Toast.LENGTH_SHORT).show();
+                usersDB.child(userId).child("connections").child("dislike").child(currentUserId).setValue(true);
+                Toast.makeText(MainActivity.this, "dislike", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
                 Card obj = (Card) dataObject;
                 String userId = obj.getUserId();
-                usersDB.child(userId).child("connections").child("Нравится").child(currentUserId).setValue(true);
+                usersDB.child(userId).child("connections").child("like").child(currentUserId).setValue(true);
                 isConnectionMatch(userId);
-                Toast.makeText(MainActivity.this, "Like", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "like", Toast.LENGTH_SHORT).show();
             }
 
             @Override
