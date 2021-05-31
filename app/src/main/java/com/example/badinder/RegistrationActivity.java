@@ -73,7 +73,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 final String name = mName.getText().toString();
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(RegistrationActivity.this, task -> {
                     if (!task.isSuccessful()) {
-                        Toast.makeText(RegistrationActivity.this, "sign up error", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegistrationActivity.this, "Ошибка при регистрации", Toast.LENGTH_SHORT).show();
                     } else {
                         String userId = mAuth.getCurrentUser().getUid();
                         DatabaseReference currentUserDb = FirebaseDatabase.getInstance().

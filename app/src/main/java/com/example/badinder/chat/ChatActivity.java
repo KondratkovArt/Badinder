@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.example.badinder.CallActivity;
 import com.example.badinder.R;
@@ -37,7 +38,8 @@ public class ChatActivity extends AppCompatActivity {
 
     private EditText mSendEditText;
 
-    private Button mSendButton, mCallBtn;
+    private Button mCallBtn;
+    private ImageButton mSendButton;
 
     private String currentUserID, matchId, chatId;
 
