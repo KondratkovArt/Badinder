@@ -13,7 +13,7 @@
         android:layout_width="251dp"
         android:layout_height="52dp"
         android:layout_marginTop="272dp"
-        android:text="login"
+        android:text="авторизация"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:layout_width="251dp"
         android:layout_height="52dp"
         android:layout_marginBottom="160dp"
-        android:text="registration"
+        android:text="Регистрация"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

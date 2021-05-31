@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="logoutUser"
-            android:text="SignOut"
+            android:text="Выйти"
             tools:ignore="MissingConstraints" />
 
 
@@ -51,7 +51,7 @@
             android:layout_height="47dp"
             android:layout_weight="1"
             android:onClick="goToMatches"
-            android:text="Matches"
+            android:text="Совпадения"
 
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
